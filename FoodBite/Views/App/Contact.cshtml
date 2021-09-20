@@ -1,0 +1,48 @@
+﻿@model ContactViewModel
+@{
+    ViewBag.Title = "Contact Us";
+}
+@section Scripts{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js"></script>
+}
+<!--Contact us-->
+<div class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class=" col-md-12">
+                <h2>Request  A<strong class="white"> Call  Back</strong></h2>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+
+                <form method="post" class="main_form">
+                    <div asp-validation-summary="ModelOnly"></div>
+                    <div class="row">
+
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <input class="form-control" placeholder="Name" type="text" asp-for="Name">
+                            <span asp-validation-for="Name"></span>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <input class="form-control" placeholder="Email" type="text" asp-for="Email">
+                            <span asp-validation-for="Email"></span>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <input class="form-control" placeholder="Phone" type="text" asp-for="Phone">
+                            <span asp-validation-for="Phone"></span>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <textarea class="textarea" placeholder="Message" type="text" asp-for="Message"></textarea>
+                            <span asp-validation-for="Message"></span>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <input type="submit" value="Send message">
+                        </div>
+                        <div>@ViewBag.UserMessage</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End of contact us-->

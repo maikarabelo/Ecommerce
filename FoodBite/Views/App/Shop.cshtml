@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Product>
+       
+           
+<div class="shop_div" style="margin-top:2%">
+    <div class="row ">
+        @foreach (var p in Model)
+        {
+            <partial name="_FoodCard" model="p" />
+            /*  <div class="col-md-4 col-lg-4 col-md-4">
+                  <div class="border bg-light rounded p-1">
+
+                          <img src="@Url.Content(p.Image)" width = "200px" height = "200px"/>
+
+                      <h3>Menu</h3>
+                      <ul class="product-props">
+                          <li>Name: @p.ProductName</li>
+                          <li>Price: @p.ProductPrice</li>
+                      </ul>
+                      <button id="buyButton" class="btn btn-success">Buy</button>
+                  </div>
+               </div> */
+
+        }
+    </div>
+</div>
